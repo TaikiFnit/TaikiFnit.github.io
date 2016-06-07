@@ -1,20 +1,21 @@
 @charset "utf8";
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
 /* load web font NotoSans */
 @font-face {
   font-family: "NotoSans";
-  src: url('../fonts/NotoSansCJKjp-Light.eot');
-  src: url('../fonts/NotoSansCJKjp-Light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NotoSansCJKjp-Light.woff') format('woff'),
-       url('../fonts/NotoSansCJKjp-Light.ttf')  format('truetype');
+  src: url('/fonts/NotoSansCJKjp-Light.eot');
+  src: url('/fonts/NotoSansCJKjp-Light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/NotoSansCJKjp-Light.woff') format('woff'),
+       url('/fonts/NotoSansCJKjp-Light.ttf')  format('truetype');
 }
-
 
 * {
   box-sizing: border-box; }
 
 html {
-  font-family: "NotoSans", NotoSans,sans-serif;
+  font-family: 'Roboto', Roboto, 'NotoSans', NotoSans, sans-serif;
 }
 
 body {
