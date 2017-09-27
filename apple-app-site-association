@@ -1,0 +1,11 @@
+{
+"applinks": {
+"App": [],
+"details": [
+{
+"appID": "jp.tripnote.test",
+"paths": [ "*" ]
+}
+]
+}
+}
