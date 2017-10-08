@@ -30,7 +30,7 @@ nav ul li {
 }
 
 main {
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 
 section {
@@ -50,17 +50,23 @@ h2 {
 }
 
 div img {
-  width: 260px;
+  width: 50%;
+  max-width: 260px;
   margin-bottom: 30px;
 }
 
 /* Github icon */
 main a {
-  font-size: 128px;
+  font-size: 82px;
   color: #333;
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 15px;
+  bottom: 40px;
+}
+
+main a i {
+  background: #F9F9F9;
+  border-radius: 35px;
 }
 
 footer {
