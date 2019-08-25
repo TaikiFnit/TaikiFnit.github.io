@@ -11,6 +11,6 @@ jobs:
       only: develop
     steps:
       - checkout
-      - run: npm install -g hexo-cli
+      - run: npm install hexo-cli
       - run: npm install
-      - run: hexo deploy
+      - run: npx hexo deploy
