@@ -24,11 +24,15 @@ tags:
 簡単に言えばHackMDで書いて, CircleCIでHexoを実行(コンパイル)して, Github PagesのリポジトリにそのままPushする感じ
 
 ### もっとかみくだくと
-0. Github上にリポジトリを2つ用意
-    1. Github pagesとして公開するためのリポジトリ(xxx.github.ioのmaster branchなど)
-    2. HexoやMarkdownファイルを保存するリポジトリ(xxx.github.ioのdevelop branchなど)
-1. Hexoの環境設定をしてGithub pagesにdeployできるように設定しておく
-2. ブログの執筆環境は[HackMD](https://hackmd.io/). エディター画面右上の項目\*1からVersionsを選ぶとGithubにpushできる*2ため, HexoのMarkdownファイルが保存されるディレクトリを保存先として指定する\*3
+#### 0. Github上にリポジトリを2つ用意
+1. Github pagesとして公開するためのリポジトリ(xxx.github.ioのmaster branchなど)
+2. HexoやMarkdownファイルを保存するリポジトリ(xxx.github.ioのdevelop branchなど)
+
+#### 1. Hexoの環境設定
+Hexoの環境設定をしてGithub pagesにdeployできるように設定しておく
+
+#### 2. HackMD
+ブログの執筆環境は[HackMD](https://hackmd.io/). エディター画面右上の項目\*1からVersionsを選ぶとGithubにpushできる*2ため, HexoのMarkdownファイルが保存されるディレクトリを保存先として指定する\*3
 
 \*1
  ![](https://i.imgur.com/E9LnSYB.png)
@@ -50,8 +54,11 @@ tags:
 
 このようなヘッダ情報をつけますが, これもコピペをするのがめんどくさいと思うので, HackMDのテンプレートとして登録しておくと便利です.
 
-3. Circle CIでHexoやMarkdownファイルを保存しているリポジトリへpushをトリガーとしてインスタンスを起動. nodejsなどのインスタンス上でHexoのインストールとコンパイルを行ない, 成果物をGithub pagesとして公開するためのリポジトリへPush
-    * 例えばこんな`circleci.yml`
+
+#### 3. CircleCI
+CircleCIでHexoやMarkdownファイルを保存しているリポジトリへpushをトリガーとしてインスタンスを起動. nodejsなどのインスタンス上でHexoのインストールとコンパイルを行ない, 成果物をGithub pagesとして公開するためのリポジトリへPush
+
+例えばこんな`circleci.yml`
 
 ```circleci.yml
 defaults: &defaults
