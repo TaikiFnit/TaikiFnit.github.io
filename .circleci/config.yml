@@ -11,7 +11,6 @@ jobs:
       only: develop
     steps:
       - checkout
-      - run: git clone https://github.com/hpcslag/hexo-theme-morgan.git themes/tocas-ui-morgan
       - run: npm install hexo-cli
       - run: npm install
       - run: npx hexo deploy
