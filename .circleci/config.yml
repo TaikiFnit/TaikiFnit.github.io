@@ -13,4 +13,4 @@ jobs:
       - checkout
       - run: npm install hexo-cli
       - run: npm install
-      - run: npx hexo deploy
+      - run: npx hexo deploy -m "[skip ci] site updated"
