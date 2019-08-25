@@ -81,7 +81,7 @@ theme: tocas-ui-morgan
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/TaikiFnit/fnit.dev.git
+  repo: https://github.com/TaikiFnit/TaikiFnit.github.io.git
   branch: master
   name: "TaikiFnitOnCircleCI"
   email: "taikifnitoncircleci@users.noreply.github.com"
