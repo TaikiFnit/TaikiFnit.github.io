@@ -14,10 +14,8 @@ tags:
 自分なりの最高のブログ環境を作ってみました
 
 ## 用語
-* [Hexo](https://hexo.io/)
-: 静的サイトジェネレーター. MarkdownからHTMLを生成する
-* [HackMD](https://hackmd.io/)
-: オンラインMarkdownエディター. 最近Githubへのpushへ対応.
+* [Hexo](https://hexo.io/): 静的サイトジェネレーター. MarkdownからHTMLを生成する
+* [HackMD](https://hackmd.io/): オンラインMarkdownエディター. 最近Githubへのpushへ対応.
 * [Github pages](https://pages.github.com/): Github上で簡単にウェブサイトを構築できる
 
 ## 執筆環境
