@@ -1,0 +1,70 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+
+#page setting - disquz comment
+enabled_disqus : true
+disqus_url : 'https://morgan-hexo-theme.disqus.com/embed.js'
+
+#page setting - slogan
+slogan : [ "Hallo, dit is mijn blog", "嗨，這是我的博客!","안녕하세요, 제 블로그입니다.", "Hi, This is my blog!", "こんにちは、私のブログへようこそ!", "مرحبا، مرحبا بك في مدونتي" ]
+slogan_random_display : false
+slogan_color: "#404040"
+
+#page setting - blog title color
+title_color : "#404040"
+title_background_color :  "#f7f7f7"
+
+#page setting - menu color
+menu_text_color : "#5a5a5a"
+menu_background_color : "#f7f7f7"
+
+#page setting - article color
+article_color : "#3498db" 
+article_color_hover : "#34b2db" 
+article_color_active : "#2075c1" #rgb(0, 188, 255)"
+
+#page feature - about me
+enabled_about_me : true
+about_me : "About Me"
+about_me_content : "I am a dedicated person with a family of four. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my teaching skills and presentation abilities. I have been successful at raising a family, and I attribute this success to my ability to plan, schedule, and handle many different tasks at once. This flexibility will help me in the classroom, where there are many different personalities and learning styles."
+
+#footer content
+footer_big_content : ""
+footer_small_content : ""
+
+#github setting
+theme: jekyll-theme-cayman
