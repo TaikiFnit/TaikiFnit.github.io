@@ -11,9 +11,6 @@ tags:
     - [Github Pages]
 ---
 
-
-# Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る
-
 自分なりの最高のブログ環境を作ってみました
 
 ## 用語
