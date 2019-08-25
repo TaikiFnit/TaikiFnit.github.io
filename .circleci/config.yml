@@ -12,8 +12,7 @@ jobs:
     steps:
       - checkout
       - run: git submodule init
-      - run: git submodule update
-      - run: git submodule foreach git pull origin master
+      - run: git submodule update --remote
       - run: npm install hexo-cli
       - run: npm install
       - run: npx hexo deploy
