@@ -11,6 +11,10 @@ jobs:
       only: develop
     steps:
       - checkout
+      command:
+      - run: git submodule init
+      - run: git submodule update
+      - run: git submodule foreach git pull origin master
       - run: npm install hexo-cli
       - run: npm install
       - run: npx hexo deploy
