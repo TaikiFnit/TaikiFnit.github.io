@@ -1,7 +1,14 @@
 ---
 title: Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る
 date: 2019-08-26 03:18:00
-tags: Hexo, HackMD, CircleCI, ブログ, GithubPages
+categories:
+    - [技術系]
+tags:
+    - [Hexo]
+    - [HackMD]
+    - [CircleCI]
+    - [ブログ]
+    - [Github Pages]
 ---
 
 
