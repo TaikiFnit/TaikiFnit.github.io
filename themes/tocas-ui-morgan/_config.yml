@@ -28,7 +28,7 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-76184277-8
 favicon: /favicon.png
 twitter: taikifnit
 google_plus: 
