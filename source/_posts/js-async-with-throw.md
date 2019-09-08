@@ -1,6 +1,6 @@
 ---
 title: jsのasync/awaitでrejectしたいときはthrow. これ大事.
-date: 2019-00-00 00:00:00
+date: 2019-09-09 02:13:00
 categories:
     - [プログラミング言語]
 tags:
