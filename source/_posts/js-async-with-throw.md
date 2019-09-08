@@ -30,12 +30,15 @@ function getUserBy(id) {
 ### async/awaitを利用した場合
 ```js
 async function getUserBy(id) {
-  const user = await db.getUser(id).catch(e => throw new Error(e));
+  const user = await db.getUser(id).catch(e => {
+    throw new Error(e)
+  });
   // userを利用したなにかの処理
   return user;
 }
 
 ```
+
 
 ## あらすじ(throwを知らない場合)
 
@@ -81,6 +84,7 @@ async function getUserBy(id) {
 }
 ```
 
+
 ## throw文の登場
 
 ここで登場するのが, jsの`throw`.
@@ -90,16 +94,6 @@ async function getUserBy(id) {
 
 とある. 実は今までろくにthrow文を使ったことがなかったのでよく仕様について理解できていなかったのだが, throwはreturnと同じく関数の実行をその場で止めるため, あらすじであったようなユーザー情報が取得できなかったら関数の処理を止めたいなどのユースケースに役に立つ. 
 
-(ちなみに今までの私のエラーハンドリングはもっぱらこんな感じ:
-```js
-fs.readFile('/etc/passwd', (err, data) => {
-  if (err) {
-    return false;
-  }
-  
-  // dataを使った処理
-});
-```
 
 ## new Error()も一緒に使おう
 
@@ -107,8 +101,21 @@ fs.readFile('/etc/passwd', (err, data) => {
 
 ```js
 throw new Error("This is error message");
-
 ```
 
 
-今までそれすらも知らずによくjsを書けてたなって自分でも思いますが, それでもいい感じに動いちゃうのがjsらしいですね.
+## まとめ
+今までthrowも知らずによくjsを書けてたなって自分でも思いますが, それでもいい感じに動いちゃうのがjsらしいですね.
+
+(ちなみに今までの私のエラーハンドリングはもっぱらこんな感じ:
+```js
+fs.readFile('/etc/passwd', (err, data) => {
+  if (err) {
+    // もはやハンドリングする気なし..
+    console.log(err);
+    return;
+  }
+  
+  // dataを使った処理
+});
+```
