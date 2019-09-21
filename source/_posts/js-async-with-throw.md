@@ -31,7 +31,7 @@ function getUserBy(id) {
 ```js
 async function getUserBy(id) {
   const user = await db.getUser(id).catch(e => {
-    throw new Error(e)
+    throw new Error(e);
   });
   // userを利用したなにかの処理
   return user;
@@ -65,7 +65,8 @@ async function getUserBy(id) {
     // ここでreturnしてもuser変数の中に戻り値が格納されてしまうだけ
     return;
   });
-  // ユーザー情報がないためユーザー情報を利用したなにかの処理でエラーが発生する可能性
+  // ユーザー情報がないためユーザー情報を利用したなにかの処理でエラーが発生する可能性.
+  // そのためエラーを回避するためにはuser変数にきちんとデータが格納されているか確認する必要性.
   return user;
 }
 ```
@@ -109,13 +110,13 @@ throw new Error("This is error message");
 
 (ちなみに今までの私のエラーハンドリングはもっぱらこんな感じ:
 ```js
-fs.readFile('/etc/passwd', (err, data) => {
+getUserBy(id, (err, user) => {
   if (err) {
     // もはやハンドリングする気なし..
     console.log(err);
     return;
   }
   
-  // dataを使った処理
+  // userを使った処理
 });
 ```
