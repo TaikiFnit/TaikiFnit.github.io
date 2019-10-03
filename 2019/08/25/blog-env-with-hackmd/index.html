@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る | ふにっとの日記</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="自分なりの最高のブログ環境を作ってみました 用語 Hexo: 静的サイトジェネレーター. MarkdownからHTMLを生成する HackMD: オンラインMarkdownエディター. 最近Githubへのpushへ対応. Github pages: Github上で簡単にウェブサイトを構築できる  執筆環境簡単に言えばHackMDで書いて, CircleCIでHexoを実行(コンパイル)して,">
+<meta name="keywords" content="Hexo,HackMD,CircleCI,ブログ,Github Pages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る">
+<meta property="og:url" content="https://fnit.dev/2019/08/25/blog-env-with-hackmd/index.html">
+<meta property="og:site_name" content="ふにっとの日記">
+<meta property="og:description" content="自分なりの最高のブログ環境を作ってみました 用語 Hexo: 静的サイトジェネレーター. MarkdownからHTMLを生成する HackMD: オンラインMarkdownエディター. 最近Githubへのpushへ対応. Github pages: Github上で簡単にウェブサイトを構築できる  執筆環境簡単に言えばHackMDで書いて, CircleCIでHexoを実行(コンパイル)して,">
+<meta property="og:locale" content="jp">
+<meta property="og:image" content="https://i.imgur.com/E9LnSYB.png">
+<meta property="og:image" content="https://i.imgur.com/lpmJyfj.png">
+<meta property="og:image" content="https://i.imgur.com/O0t4gdS.png">
+<meta property="og:updated_time" content="2019-10-03T11:33:20.679Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る">
+<meta name="twitter:description" content="自分なりの最高のブログ環境を作ってみました 用語 Hexo: 静的サイトジェネレーター. MarkdownからHTMLを生成する HackMD: オンラインMarkdownエディター. 最近Githubへのpushへ対応. Github pages: Github上で簡単にウェブサイトを構築できる  執筆環境簡単に言えばHackMDで書いて, CircleCIでHexoを実行(コンパイル)して,">
+<meta name="twitter:image" content="https://i.imgur.com/E9LnSYB.png">
+<meta name="twitter:creator" content="@taikifnit">
+  
+    <link rel="alternate" href="/atom.xml" title="ふにっとの日記" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/tocas.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #f7f7f7;
+    }
+
+    #menu-color-id a{
+        color: #5a5a5a;
+    }
+  </style>
+  <script src="/js/tocas.js"></script>
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-76184277-8', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head></html>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/">Home</a>
+        
+            <a class="item" href="/archives">Archives</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #f7f7f7;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">ふにっとの日記</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;">エンジニアでゲーマーなふにっとが日々の活動をアウトプットしていくブログ</div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">Hexo + HackMD + CircleCI + Github Pagesで最高のブログ執筆環境を作る</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2019/8/25 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/tags/CircleCI/">CircleCI</a></li><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/tags/Github-Pages/">Github Pages</a></li><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/tags/HackMD/">HackMD</a></li><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/tags/Hexo/">Hexo</a></li><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/tags/ブログ/">ブログ</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <p>自分なりの最高のブログ環境を作ってみました</p>
+<h2 id="用語"><a href="#用語" class="headerlink" title="用語"></a>用語</h2><ul>
+<li><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>: 静的サイトジェネレーター. MarkdownからHTMLを生成する</li>
+<li><a href="https://hackmd.io/" target="_blank" rel="noopener">HackMD</a>: オンラインMarkdownエディター. 最近Githubへのpushへ対応.</li>
+<li><a href="https://pages.github.com/" target="_blank" rel="noopener">Github pages</a>: Github上で簡単にウェブサイトを構築できる</li>
+</ul>
+<h2 id="執筆環境"><a href="#執筆環境" class="headerlink" title="執筆環境"></a>執筆環境</h2><p>簡単に言えばHackMDで書いて, CircleCIでHexoを実行(コンパイル)して, Github PagesのリポジトリにそのままPushする感じ</p>
+<h3 id="もっとかみくだくと"><a href="#もっとかみくだくと" class="headerlink" title="もっとかみくだくと"></a>もっとかみくだくと</h3><h4 id="0-Github上にリポジトリを2つ用意"><a href="#0-Github上にリポジトリを2つ用意" class="headerlink" title="0. Github上にリポジトリを2つ用意"></a>0. Github上にリポジトリを2つ用意</h4><ol>
+<li>Github pagesとして公開するためのリポジトリ(xxx.github.ioのmaster branchなど)</li>
+<li>HexoやMarkdownファイルを保存するリポジトリ(xxx.github.ioのdevelop branchなど)</li>
+</ol>
+<h4 id="1-Hexoの環境設定"><a href="#1-Hexoの環境設定" class="headerlink" title="1. Hexoの環境設定"></a>1. Hexoの環境設定</h4><p>Hexoの環境設定をしてGithub pagesにdeployできるように設定しておく</p>
+<h4 id="2-HackMD"><a href="#2-HackMD" class="headerlink" title="2. HackMD"></a>2. HackMD</h4><p>ブログの執筆環境は<a href="https://hackmd.io/" target="_blank" rel="noopener">HackMD</a>. エディター画面右上の項目*1からVersionsを選ぶとGithubにpushできる<em>2ため, HexoのMarkdownファイルが保存されるディレクトリを保存先として指定する\</em>3</p>
+<p>*1<br> <img src="https://i.imgur.com/E9LnSYB.png" alt><br>*2<br><img src="https://i.imgur.com/lpmJyfj.png" alt></p>
+<p>*3<br><img src="https://i.imgur.com/O0t4gdS.png" alt></p>
+<p>Hexoでブログ記事のメタ情報を与えるときは, </p>
+<pre><code>---
+title: 
+date: 2019-00-00 00:00:00
+tags:
+---</code></pre><p>このようなヘッダ情報をつけますが, これもコピペをするのがめんどくさいと思うので, HackMDのテンプレートとして登録しておくと便利です.</p>
+<h4 id="3-CircleCI"><a href="#3-CircleCI" class="headerlink" title="3. CircleCI"></a>3. CircleCI</h4><p>CircleCIでHexoやMarkdownファイルを保存しているリポジトリへpushをトリガーとしてインスタンスを起動. nodejsなどのインスタンス上でHexoのインストールとコンパイルを行ない, 成果物をGithub pagesとして公開するためのリポジトリへPush</p>
+<p>例えばこんな<code>circleci.yml</code></p>
+<pre class=" language-circleci.yml"><code class="language-circleci.yml">defaults: &defaults
+  docker:
+    - image: circleci/node:10.9.0
+  working_directory: ~/repo
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    branches:
+      only: develop
+    steps:
+      - checkout
+      - run: npm install hexo-cli
+      - run: npm install
+      - run: npx hexo deploy -m "[skip ci] site updated"
+</code></pre>
+<h2 id="何がいいのか"><a href="#何がいいのか" class="headerlink" title="何がいいのか"></a>何がいいのか</h2><p>結局Github PagesでHexoを公開しているだけなので, ローカルでいいじゃんかってなるかもしれないけど, ローカル環境でテキストファイルでブログ記事を管理するのはいかんせん大変でブログを書こうと思ってから書き始めるまでのステップ数が長かったり(ターミナル開いて<code>hexo new ...</code>して…), ローカルなのでデータが飛んだり他のデバイスでシームレスに書けなかったりするのでHackMD.ioを利用すれば複数端末リアルタイムですぐにブログを書きはじめることができるのがいい点ではないかと思います.</p>
+
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://hunitsutonori-ji.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="/2019/09/08/js-async-with-throw/" class="styled-border">
+                    ←
+                    jsのasync/awaitでrejectしたいときはthrow. これ大事.
+                    
+                </a>
+            
+            
+                <a href="#"></a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["エンジニアでゲーマーなふにっとが日々の活動をアウトプットしていくブログ"];
+</script>
+<script src="/js/script.js"></script>
+</body>
+</html>
