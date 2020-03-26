@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* [START reset] */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* [END reset] */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: #24292E;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  padding-top: 15vh;
+  font-weight: bold;
+}
+
+ul {
+  width: 990px;
+  height: 300px;
+  /* vertical, horizontal centering */
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+li {
+  width: 330px;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: normal;
+  transition: .2s linear;
+}
+
+li:hover {
+  transition: .2s linear;
+  text-shadow: 0 0 10px white;
+}
+
+.iconArea {
+  font-size: 168.1px;
+}
+
+.textArea {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  background: #777;
+  filter: blur(300px);
+}
+
+/* use IE? it's so sad... */
+@media all and (-ms-high-contrast:none) {
+  .blur {
+    display: none;
+  }
+}
+
+/* also firefox cant display correctly */
+@-moz-document url-prefix() {
+  .blur {
+    display: none;
+  }
+}
